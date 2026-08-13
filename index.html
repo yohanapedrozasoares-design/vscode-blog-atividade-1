@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+        <title>Agro</title>
+        <style>
+            header{
+                background-color: forestgreen;
+                color: white;
+                text-align: center;
+            }
+            main{
+                background-color: white;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+            p{
+                background-color: white;
+                color: forestgreen;
+            }
+            h2{
+                background-color:white;
+                color:#1A500E;
+            }
+                img{
+                    width: 140px;
+                    height: 100px;
+                    display: flex;
+            }
+            article{
+                display: flex;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>AgroRotina</h1>
+            <h4>Por: Yohana Soares</h4>
+            <p>Relatos de uma estudante do colégio agrícola</p>
+        </header>
+        <main>
+            <article>
+
+                <img src="colegio-agricola-selo.jpg" alt="logo do colegio agricola de foz do iguaçu PR">
+                <div>    
+                    <h2>Introdução</h2>
+                    <p>Aqui irei compartilhar memórias e conhecimentos que adquiri durante o 1ºano do colégio agrícola, além de provas, trabalhos e atividades avaliativas.</p>
+                    <button>❤️​<span>0</span></button>
+                    <button>💔​​<span>0</span></button>
+                </div>
+            </article>
+            <article>
+                <img src="programaçao-e-agro.png" alt="Ilustração de programação aplicada à agronomia.">
+              <div>    
+                  <h2>Objetivo</h2>
+                  <p>Esse site está sendo criado para um trabalho e aprendizado de programação, estou me divertindo mechendo com os comandos e testando novas experiências. Essa é a aula 7 do alura, em que aprendi a colocar um novo artigo.</p>
+                  <button>❤️​<span>0</span></button>
+                  <button>💔​​<span>0</span></button>
+                </div>
+            </article>
+        </main>
+    </body>
+    <script>
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function(botao){
+            let curtiu = false;
+            botao.addEventListener("click", botaoClicado);
+            function botaoClicado(){
+                console.log("fui clicado");
+                let texto = botao.querySelector("span");
+                if (curtiu === false){
+                texto.textContent++;
+                curtiu = true;
+                } else {
+                    texto.textContent--;
+                    curtiu = false;
+                }
+             }
+        }
+    )
+
+    </script>
+</html>
